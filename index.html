@@ -212,7 +212,7 @@ const P=[
 ];
 const N=4;let cat=-1,age=-1;
 const $=s=>document.querySelector(s);
-const fmt=v=>Math.round(v/1000).toLocaleString('vi-VN')+'.000đ';
+const fmt=v=>Math.round(v).toLocaleString('vi-VN')+'đ';
 function chips(el,list,get,set){el.innerHTML='';[-1,...list.keys()].forEach(i=>{const b=document.createElement('button');b.className='chip'+(get()===i?' on':'');b.textContent=i<0?(el.id==='cats'?'Tất cả nhóm':'Mọi độ tuổi'):list[i];b.onclick=()=>{set(i);render()};el.appendChild(b)})}
 function render(){chips($('#cats'),CATS,()=>cat,v=>cat=v);chips($('#ages'),AGES,()=>age,v=>age=v);
  const q=$('#q').value.trim().toLowerCase();let L=P.filter(p=>(cat<0||p[2]===cat)&&(age<0||p[3]===age)&&(!q||(p[1]+' '+p[6]+' '+p[0]).toLowerCase().includes(q)));
