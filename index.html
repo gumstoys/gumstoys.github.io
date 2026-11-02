@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gum's Toys – Đồ chơi thông minh Mideer chính hãng tại Đà Nẵng</title>
+<meta name="description" content="Gum's Toys – cửa hàng đồ chơi thông minh Mideer chính hãng tại Đà Nẵng. Freeship nội thành, COD, kiểm tra hàng trước khi nhận, gói quà miễn phí. Hotline/Zalo 0981 341 202.">
+<meta property="og:title" content="Gum's Toys – Đồ chơi thông minh Mideer Đà Nẵng">
+<meta property="og:description" content="Đồ chơi Mideer chính hãng, freeship nội thành Đà Nẵng, gói quà miễn phí.">
+<meta property="og:image" content="https://gumstoys.github.io/img/md4281-1.jpg">
+<link rel="icon" href="logo.jpg">
+<style>
+:root{--blue:#3a6db5;--blue-d:#2b528a;--peach:#fbefe6;--pink:#f6c9c0;--ink:#2a2f3a;--mute:#6b7280;--line:#ece6e0;--bg:#fffaf6;--ok:#2f9e6f}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:20;background:rgba(255,250,246,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:14px;height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:48px;height:48px;border-radius:50%}
+.brand b{font-size:20px;color:var(--blue)}
+.brand small{display:block;font-size:12px;color:var(--mute);font-weight:400}
+.bar nav{margin-left:auto;display:flex;gap:18px;font-size:15px}
+.bar nav a{text-decoration:none;color:var(--ink)}
+.bar nav a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:999px;padding:10px 18px;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+.btn-line{background:#fff;color:var(--blue);border:1.5px solid var(--blue)}
+.hero{background:linear-gradient(135deg,var(--peach),#fff 60%);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:46px 18px}
+.hero h1{font-size:38px;line-height:1.2;margin:0 0 14px}
+.hero h1 span{color:var(--blue)}
+.hero p{font-size:17px;color:var(--mute);margin:0 0 22px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-img{border-radius:24px;overflow:hidden;aspect-ratio:1/1;background:#fff;box-shadow:0 10px 30px rgba(58,109,181,.12)}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+.perks{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px auto}
+.perk{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px;text-align:center;font-size:14px}
+.perk i{font-style:normal;font-size:24px;display:block;margin-bottom:4px}
+.perk b{display:block;font-size:15px}
+h2{font-size:26px;margin:34px 0 6px}
+.sub{color:var(--mute);margin:0 0 18px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer}
+.chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:14px 0 18px}
+.tools input{flex:1;min-width:220px;padding:11px 16px;border-radius:999px;border:1.5px solid var(--line);font-size:15px;background:#fff}
+.tools select{padding:10px 14px;border-radius:999px;border:1.5px solid var(--line);font-size:14px;background:#fff}
+.count{color:var(--mute);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.07)}
+.card .ph{aspect-ratio:1/1;background:#f7f3ef;overflow:hidden}
+.card .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.card .bd{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{display:inline-block;font-size:12px;background:var(--peach);color:#9a5a3c;border-radius:999px;padding:2px 10px;align-self:flex-start}
+.card h3{font-size:15px;margin:0;font-weight:600;line-height:1.35}
+.price{font-weight:700;color:var(--blue);font-size:17px;margin-top:auto}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;margin:40px 0}
+.about p{margin:0 0 12px}
+.about img{width:100%;max-width:320px;display:block;margin:auto;border-radius:50%}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+.faq summary{font-weight:600;cursor:pointer}
+footer{background:#24324a;color:#dfe6f1;margin-top:46px;padding:34px 0 24px;font-size:15px}
+footer .cols{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:26px}
+footer h4{color:#fff;margin:0 0 10px}
+footer a{color:#dfe6f1;text-decoration:none}footer a:hover{color:#fff;text-decoration:underline}
+footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
+.copy{border-top:1px solid #3a4a66;margin-top:24px;padding-top:14px;font-size:13px;color:#a9b5c8}
+.float{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px;z-index:30}
+.float a{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;text-decoration:none;box-shadow:0 6px 16px rgba(0,0,0,.2);font-size:13px}
+.f-zalo{background:#0068ff}.f-call{background:var(--ok);font-size:22px!important}
+.modal{position:fixed;inset:0;background:rgba(20,25,35,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.modal.on{display:flex}
+.box{background:#fff;border-radius:22px;max-width:920px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr;position:relative}
+.box .x{position:absolute;right:12px;top:10px;border:0;background:#fff;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.gal{padding:18px}
+.gal .main{aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#f7f3ef}
+.gal .main img{width:100%;height:100%;object-fit:contain}
+.thumbs{display:flex;gap:8px;margin-top:10px}
+.thumbs img{width:22%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:2px solid transparent;cursor:pointer}
+.thumbs img.on{border-color:var(--blue)}
+.info{padding:26px 24px 24px 6px;display:flex;flex-direction:column;gap:10px}
+.info h3{font-size:22px;margin:0;line-height:1.3}
+.info .price{font-size:24px;margin:0}
+.info ul{margin:0;padding-left:20px}
+.meta{font-size:14px;color:var(--mute)}
+.order{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.note{font-size:13px;color:var(--mute)}
+@media (max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}.perks{grid-template-columns:repeat(3,1fr)}.bar nav{display:none}}
+@media (max-width:680px){.hero .wrap{grid-template-columns:1fr;padding:28px 18px}.hero h1{font-size:28px}.hero-img{display:none}.grid{grid-template-columns:repeat(2,1fr);gap:12px}.perks{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}.box{grid-template-columns:1fr}.info{padding:0 20px 22px}footer .cols{grid-template-columns:1fr}.bar .btn{display:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+  <a class="brand" href="#"><img src="logo.jpg" alt="Gum's Toys"><span><b>Gum's Toys</b><small>Đồ chơi thông minh Mideer · Đà Nẵng</small></span></a>
+  <nav><a href="#san-pham">Sản phẩm</a><a href="#ve-shop">Về shop</a><a href="#hoi-dap">Hỏi đáp</a><a href="#lien-he">Liên hệ</a></nav>
+  <a class="btn btn-blue" href="https://zalo.me/0981341202" target="_blank" rel="noopener">Nhắn Zalo</a>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Đồ chơi thông minh <span>Mideer chính hãng</span> cho bé tại Đà Nẵng</h1>
+    <p>Đồ chơi giúp bé tư duy, sáng tạo và vận động – an toàn, đẹp như tác phẩm nghệ thuật. Shop chỉ bán những món chính con mình cũng chơi.</p>
+    <div class="cta"><a class="btn btn-blue" href="#san-pham">Xem sản phẩm</a><a class="btn btn-line" href="tel:0981341202">Gọi 0981 341 202</a></div>
+  </div>
+  <div class="hero-img"><img src="img/md4281-2.jpg" alt="Xếp hình nam châm ánh sáng Mideer"></div>
+</div></section>
+
+<div class="wrap">
+  <div class="perks">
+    <div class="perk"><i>🚚</i><b>Freeship</b>nội thành Đà Nẵng</div>
+    <div class="perk"><i>💵</i><b>COD</b>trả tiền khi nhận</div>
+    <div class="perk"><i>📦</i><b>Kiểm tra hàng</b>trước khi nhận</div>
+    <div class="perk"><i>🔄</i><b>Đổi trả 7 ngày</b>hàng còn nguyên seal</div>
+    <div class="perk"><i>🎁</i><b>Gói quà miễn phí</b>kèm thiệp</div>
+  </div>
+
+  <h2 id="san-pham">Sản phẩm đang có tại shop</h2>
+  <p class="sub">Chọn theo nhóm đồ chơi hoặc độ tuổi của bé. Bấm vào sản phẩm để xem ảnh và mô tả.</p>
+  <div class="filters" id="cats"></div>
+  <div class="filters" id="ages"></div>
+  <div class="tools"><input id="q" type="search" placeholder="Tìm đồ chơi… (ví dụ: nam châm, slime, vẽ)"><select id="sort"><option value="">Sắp xếp: mặc định</option><option value="asc">Giá thấp → cao</option><option value="desc">Giá cao → thấp</option></select><span class="count" id="count"></span></div>
+  <div class="grid" id="grid"></div>
+  <p class="note" style="margin-top:14px">Giá niêm yết tại cửa hàng. Số lượng có hạn – ba mẹ nhắn Zalo để shop kiểm tra hàng có sẵn trước khi đặt.</p>
+
+  <section class="about" id="ve-shop">
+    <div>
+      <h2 style="margin-top:0">Câu chuyện Gum's Toys</h2>
+      <p>Gum's Toys bắt đầu từ chính bé Gum nhà mình. Mỗi lần đi tìm quà cho con, tụi mình nhận ra ở Đà Nẵng không dễ tìm được đồ chơi vừa giúp bé tư duy, vừa an toàn, lại rõ nguồn gốc.</p>
+      <p>Vì vậy shop chọn Mideer – thương hiệu đồ chơi có thiết kế đẹp, chất liệu an toàn theo tiêu chuẩn châu Âu EN71 – và chỉ bán những món mà chính con mình cũng chơi.</p>
+      <p>Đơn quà nào cũng được gói miễn phí và viết thiệp theo lời nhắn của ba mẹ, vì niềm vui của bé bắt đầu từ lúc mở hộp quà.</p>
+    </div>
+    <img src="logo.jpg" alt="Logo Gum's Toys">
+  </section>
+
+  <section class="faq" id="hoi-dap">
+    <h2>Ba mẹ hay hỏi</h2>
+    <details><summary>Giao hàng thế nào, bao lâu nhận được?</summary><p>Miễn phí giao nội thành Đà Nẵng. Đặt trước 15:00 nhận sau 1 ngày, đặt sau 15:00 nhận sau 2 ngày.</p></details>
+    <details><summary>Có thanh toán khi nhận hàng không?</summary><p>Có. Shop nhận COD và ba mẹ được kiểm tra hàng trước khi nhận.</p></details>
+    <details><summary>Chính sách đổi trả?</summary><p>Đổi trả trong 7 ngày nếu sản phẩm còn nguyên seal.</p></details>
+    <details><summary>Shop có gói quà không?</summary><p>Có, gói quà miễn phí và viết thiệp theo lời nhắn của ba mẹ.</p></details>
+    <details><summary>Tôi có thể ghé xem trực tiếp không?</summary><p>Được ạ! Shop mở cửa 8:00–21:00 tại 28 Hoà Minh 23, P. Hoà Khánh, Đà Nẵng.</p></details>
+  </section>
+</div>
+
+<footer id="lien-he"><div class="wrap">
+  <div class="cols">
+    <div><h4>Gum's Toys</h4><p>Đồ chơi thông minh Mideer chính hãng tại Đà Nẵng.</p><p>🏠 28 Hoà Minh 23, P. Hoà Khánh, Đà Nẵng<br>🕗 Mở cửa 8:00–21:00<br>📞 Hotline/Zalo: <a href="tel:0981341202">0981 341 202</a><br>🗺️ <a href="https://www.google.com/maps/search/?api=1&query=28+H%C3%B2a+Minh+23+%C4%90%C3%A0+N%E1%BA%B5ng" target="_blank" rel="noopener">Xem bản đồ</a></p></div>
+    <div><h4>Fanpage</h4><ul>
+      <li><a href="https://www.facebook.com/GumtoyMideerdanang" target="_blank" rel="noopener">Gum's Toys – Đồ chơi thông minh MiDeer Đà Nẵng</a></li>
+      <li><a href="https://www.facebook.com/846189695254243" target="_blank" rel="noopener">Đồ Chơi Đà Nẵng</a></li>
+      <li><a href="https://www.facebook.com/1451279381394727" target="_blank" rel="noopener">Đồ Chơi Giáo Dục &amp; Phát Triển Trí Tuệ Đà Nẵng</a></li>
+      <li><a href="https://www.facebook.com/1495626763623315" target="_blank" rel="noopener">Quà Tặng Sinh Nhật Cho Bé Đà Nẵng</a></li>
+    </ul></div>
+    <div><h4>Đặt hàng nhanh</h4><ul>
+      <li><a href="https://zalo.me/0981341202" target="_blank" rel="noopener">💬 Nhắn Zalo 0981 341 202</a></li>
+      <li><a href="https://m.me/GumtoyMideerdanang" target="_blank" rel="noopener">💬 Nhắn Messenger</a></li>
+      <li><a href="tel:0981341202">📞 Gọi điện</a></li>
+    </ul></div>
+  </div>
+  <div class="copy">© 2026 Gum's Toys. Ảnh sản phẩm từ thương hiệu Mideer.</div>
+</div></footer>
+
+<div class="float"><a class="f-zalo" href="https://zalo.me/0981341202" target="_blank" rel="noopener">Zalo</a><a class="f-call" href="tel:0981341202" aria-label="Gọi điện">📞</a></div>
+
+<div class="modal" id="modal"><div class="box">
+  <button class="x" id="x" aria-label="Đóng">×</button>
+  <div class="gal"><div class="main"><img id="mImg" alt=""></div><div class="thumbs" id="mThumbs"></div></div>
+  <div class="info"><span class="tag" id="mCat"></span><h3 id="mName"></h3><div class="price" id="mPrice"></div><div class="meta" id="mMeta"></div><div id="mDesc"></div>
+    <div class="order"><a class="btn btn-blue" href="https://zalo.me/0981341202" target="_blank" rel="noopener">Đặt qua Zalo</a><a class="btn btn-line" href="tel:0981341202">Gọi 0981 341 202</a></div>
+    <p class="note">Nhắn shop tên sản phẩm (hoặc mã <b id="mCode"></b>) để được tư vấn và đặt hàng. Freeship nội thành Đà Nẵng · COD · gói quà miễn phí.</p>
+  </div>
+</div></div>
+
+<script>
+const CATS=["Xếp hình & STEM","Mỹ thuật & thủ công","Nhào nặn & cảm giác","Nhập vai, kể chuyện & âm nhạc","Vận động & ngoài trời"];
+const AGES=["Dưới 2 tuổi","2–3 tuổi","3–6 tuổi","Trên 6 tuổi"];
+// [mã, tên, nhóm(0-4), nhóm tuổi(0-3), giá, tuổi hãng, mô tả, điểm nổi bật]
+const P=[
+["md4281","Xếp hình nam châm ánh sáng Creative",0,2,602500,"3+","Những miếng nam châm trong suốt nhiều màu hút nhau chắc chắn. Bé ghép nhà, xe, lâu đài… rồi ngắm các lớp màu chồng lên nhau lung linh dưới ánh sáng.",["Luyện tư duy không gian, nhận biết hình khối và màu sắc","Rèn sự khéo léo và tính kiên nhẫn","Nhựa ABS dày dặn"]],
+["md1166","Xếp hình nam châm ánh sáng Marble Run – 100 miếng",0,2,1685000,"3+","Bộ nam châm ánh sáng kết hợp đường lăn bi: bé tự thiết kế đường cho viên bi chạy, thử – sai – sửa như một kỹ sư nhỏ.",["Tư duy logic và giải quyết vấn đề","Hiểu về độ dốc, chuyển động","Chơi được nhiều kiểu lắp ghép"]],
+["waffle","Khối lắp ghép 3D Waffle Building Blocks",0,2,680000,"3+","Các miếng ghép có rãnh như bánh waffle, chỉ cần cài vào nhau là dựng được robot, con vật, lâu đài – không cần ốc vít hay keo.",["Kích thích trí tưởng tượng","Luyện phối hợp tay – mắt","Anh chị em chơi cùng được"]],
+["md1758","Xếp hình ốc vít Versatile Screw Builder – 166 chi tiết",0,2,680000,"3+","Bộ lắp ráp có ốc vít và dụng cụ an toàn cho bé tự tay dựng xe, máy bay, robot theo hướng dẫn hoặc theo ý mình.",["Rèn vận động tinh của đôi tay","Làm quen với dụng cụ kỹ thuật","Rèn tính kiên nhẫn, tập trung"]],
+["md3400","Khối rubik nam châm Magnetic Cube",0,3,335000,"6+","Khối lập phương nam châm có thể xoay, gập, biến thành nhiều hình dạng khác nhau – thử thách tư duy không gian cho bé lớn.",["Tư duy không gian 3D","Giải đố, sáng tạo hình mới","Gọn nhẹ, mang đi chơi tiện"]],
+["md6283","Xếp hình gỗ nam châm Magnetic Geometry",0,2,1125000,"3+","Các miếng gỗ hình học có gắn nam châm, bé ghép theo thẻ mẫu hoặc tự sáng tạo bức tranh của riêng mình.",["Làm quen hình học, đối xứng","Nhận biết màu sắc, hình khối","Chất liệu gỗ thân thiện"]],
+["md1705","STEM lắp ráp mạch điện Circuit Crafter",0,3,410000,"8+","Bé tự lắp các mạch điện đơn giản để đèn sáng, quạt quay – hiểu nguyên lý dòng điện qua thực hành.",["Khoa học – kỹ thuật qua trải nghiệm","Rèn tư duy logic","Phù hợp bé từ 8 tuổi"]],
+["md0112","Kính lúp chú sâu háu ăn",0,2,80000,"1+","Kính lúp in hình chú sâu háu ăn (The Very Hungry Caterpillar), mặt kính 4cm vừa tay bé – mỗi chiếc lá, con kiến đều thành điều kỳ diệu.",["Nuôi dưỡng trí tò mò, khả năng quan sát","Khuyến khích bé khám phá thiên nhiên","Món quà nhỏ xinh"]],
+["ct2207","Đèn pin kể chuyện – 12 truyện cổ tích",3,2,495000,"2–5 tuổi","Bật đèn pin chiếu lên tường, từng khung hình câu chuyện hiện ra, ba mẹ đọc theo sách đi kèm. Kiêm luôn đèn ngủ.",["12 truyện: Lọ Lem, Pinocchio, Cô bé tí hon…","Tạo thói quen nghe truyện mỗi tối","Gắn kết ba mẹ và con"]],
+["karaoke","Loa bluetooth kèm mic Versatile Singalong",3,3,1025000,"3+","Bé cầm mic hát, ba mẹ kết nối điện thoại qua bluetooth để phát nhạc – cả nhà có ngay buổi karaoke nho nhỏ.",["Giúp bé tự tin thể hiện","Nuôi dưỡng cảm thụ âm nhạc","Thiết kế xinh xắn cho bé"]],
+["musicbox","Hộp nhạc quay tay Hand Crank Music Box",3,1,150000,"3+","Bé tự quay tay cầm để nghe giai điệu nhẹ nhàng. Không dùng pin, không dùng điện.",["Cảm thụ âm nhạc","Rèn khéo léo đôi tay","Quà sinh nhật, quà Giáng sinh xinh xắn"]],
+["md1695","Tiệm Burger – đồ chơi nhập vai nấu ăn",3,2,285000,"3+","Bộ đồ chơi nhập vai làm hamburger: bé tự xếp bánh, rau, thịt, phục vụ “khách” là ba mẹ.",["Phát triển ngôn ngữ, giao tiếp","Học về thực phẩm","Trò chơi nhập vai cả nhà cùng chơi"]],
+["md2349","Bộ cắt hoa quả Cutting Play Set",3,1,450000,"3+","Rau củ quả gắn bằng khớp dính, bé dùng dao đồ chơi “cắt” làm đôi – vừa chơi vừa học tên các loại quả.",["Nhập vai nấu ăn","Luyện phối hợp tay – mắt","Học tên, màu sắc rau củ"]],
+["md1615","Bút màu Acrylic",1,2,642000,"3+","Mực acrylic dạng lỏng chảy mượt, lên màu tươi, khô nhanh. Bé vẽ được trên giấy, đá, gỗ và nhiều bề mặt khác.",["Thoả sức sáng tạo","Bé tự trang trí quà tặng","Hộp bút đẹp, hợp làm quà"]],
+["md2262","Thảm vẽ nước Magic Water Doodle Mat",1,2,500000,"3+","Đổ nước sạch vào bút, vẽ lên thảm là màu hiện ra; nước khô hình biến mất, bé lại vẽ tiếp.",["Không mực, không lem nhem","Luyện cầm bút trước khi tập viết","Dùng lại rất nhiều lần"]],
+["md1542","Áo khoác vẽ tranh chống thấm Art Smock",1,2,220000,"3+","Áo choàng chống thấm mặc ngoài khi vẽ, tô màu, nặn đất – ba mẹ yên tâm cho bé thoả sức sáng tạo.",["Giữ quần áo sạch sẽ","Dễ lau chùi","Hợp đi kèm bộ màu vẽ"]],
+["md2377","Bảng vẽ 2 mặt tự xoá Travel Board",1,2,480000,"3+","Bảng vẽ tự xoá hai mặt nhỏ gọn, mang theo khi đi xe, đi chơi, đi nhà hàng.",["Không cần giấy, không bẩn","Vẽ, viết, chơi trò chơi","Gọn nhẹ cho chuyến đi"]],
+["md6123","Kéo thủ công an toàn",1,2,60000,"3+","Kéo thủ công thiết kế cho tay bé, an toàn khi tập cắt giấy.",["Luyện vận động tinh","Chuẩn bị kỹ năng cho lớp học","Dễ cầm, dễ dùng"]],
+["md4151","Keo dán xếp hình Puzzle Glue",1,2,80000,"3+","Keo chuyên dùng để cố định bức tranh xếp hình đã hoàn thành, giữ lại làm kỷ niệm hoặc treo trang trí.",["Lưu giữ thành quả của bé","Dễ quét, khô trong","Dùng cho tranh ghép giấy"]],
+["md1529","Bộ thiết kế vòng tay Charm Bracelet",1,3,565000,"6+","Bé gái tự chọn hạt, charm để thiết kế vòng tay của riêng mình hoặc làm quà tặng bạn bè.",["Sáng tạo, thẩm mỹ","Rèn khéo léo đôi tay","Món quà ý nghĩa cho bé gái"]],
+["md3392","Kẽm nhung làm hoa Handicraft Kit",1,3,805000,"6+","Bộ kẽm nhung nhiều màu để bé uốn, xoắn thành hoa, con vật – làm quà tặng cô, tặng mẹ.",["Thủ công sáng tạo","Rèn vận động tinh","Hợp làm quà 20/11, 8/3"]],
+["pearly","Slime dẻo trong suốt Pearly Putty",2,2,135000,"3+","Slime trong suốt mềm dẻo, kéo giãn, nhào nặn đã tay – giúp bé thư giãn và khám phá xúc giác.",["Kích thích giác quan","Giúp bé thư giãn, tập trung","Nhiều màu để chọn"]],
+["md1500","Đất nặn lúa mì hữu cơ Mellow Dough",2,1,474000,"18 tháng+","Đất nặn làm từ bột lúa mì, mềm mịn, màu sắc tươi – lựa chọn an tâm cho bé nhỏ mới tập nặn.",["Phù hợp bé từ 18 tháng","Luyện đôi tay và trí tưởng tượng","Màu sắc tươi sáng"]],
+["md4326","Cát động lực kèm khuôn làm bánh Magic Sand",2,2,570000,"3+","Cát động lực mịn, không dính tay, kèm khuôn để bé “làm bánh”, nặn hình thoả thích ngay trong nhà.",["Kích thích xúc giác, sáng tạo","Chơi trong nhà ngày mưa","Dễ dọn dẹp"]],
+["md2278","Thú nhún bơm hơi Pony",4,0,615000,"18 tháng+","Chú ngựa pony bơm hơi để bé ngồi lên, nắm tai và nhún nhảy khắp nhà.",["Luyện thăng bằng, khoẻ chân","Vận động trong nhà","Xả hơi cất gọn"]],
+["md3353","Bóng hơi yoga Sensory Training Ball",4,2,250000,"3+","Bóng hơi cho bé lăn, ôm, nằm sấp, ngồi nhún – vận động ngay trong nhà những ngày mưa.",["Luyện thăng bằng, cảm nhận cơ thể","Giúp bé xả năng lượng","Xả hơi cất gọn"]],
+["md6409","Bắn diều New Catapult Kite",4,2,90000,"3+","Dùng bộ phóng để diều vút lên cao rồi lượn xuống – thả diều không cần chờ gió.",["Vận động ngoài trời","Tò mò về lực và gió","Chơi ở công viên, bãi biển"]],
+["md1531","Đèn pin mini Outdoor Adventure",4,2,160000,"3+","Đèn pin nhỏ gọn vừa tay bé để khám phá góc tối, chơi trốn tìm, đi cắm trại cùng ba mẹ.",["Giúp bé bớt sợ bóng tối","Khuyến khích khám phá","Thiết kế cho tay bé"]],
+["md3410","Que tạo bong bóng xà phòng",4,2,110000,"3+","Que thổi bong bóng xà phòng cho bé chạy nhảy, đuổi bắt bong bóng ngoài trời.",["Vận động, vui chơi ngoài trời","Luyện hơi thở, phối hợp","Món quà nhỏ cho bé"]],
+["md4304","Bộ xúc cát đi biển Beach Sand Toy Set",4,2,225000,"3+","Bộ xô, xẻng, khuôn cát cho bé xây lâu đài cát ở biển Mỹ Khê hay sân chơi gần nhà.",["Vận động ngoài trời","Sáng tạo hình khối","Hợp mang đi biển"]]
+];
+const N=4;let cat=-1,age=-1;
+const $=s=>document.querySelector(s);
+const fmt=v=>Math.round(v/1000).toLocaleString('vi-VN')+'.000đ';
+function chips(el,list,get,set){el.innerHTML='';[-1,...list.keys()].forEach(i=>{const b=document.createElement('button');b.className='chip'+(get()===i?' on':'');b.textContent=i<0?(el.id==='cats'?'Tất cả nhóm':'Mọi độ tuổi'):list[i];b.onclick=()=>{set(i);render()};el.appendChild(b)})}
+function render(){chips($('#cats'),CATS,()=>cat,v=>cat=v);chips($('#ages'),AGES,()=>age,v=>age=v);
+ const q=$('#q').value.trim().toLowerCase();let L=P.filter(p=>(cat<0||p[2]===cat)&&(age<0||p[3]===age)&&(!q||(p[1]+' '+p[6]+' '+p[0]).toLowerCase().includes(q)));
+ const s=$('#sort').value;if(s)L=[...L].sort((a,b)=>s==='asc'?a[4]-b[4]:b[4]-a[4]);
+ $('#count').textContent=L.length+' sản phẩm';
+ $('#grid').innerHTML=L.map(p=>'<div class="card" data-c="'+p[0]+'"><div class="ph"><img loading="lazy" src="img/'+p[0]+'-1.jpg" alt="'+p[1]+'"></div><div class="bd"><span class="tag">'+AGES[p[3]]+'</span><h3>'+p[1]+'</h3><div class="price">'+fmt(p[4])+'</div></div></div>').join('')||'<p>Không tìm thấy sản phẩm phù hợp.</p>';
+ document.querySelectorAll('.card').forEach(c=>c.onclick=()=>open(c.dataset.c));}
+function open(code){const p=P.find(x=>x[0]===code);if(!p)return;
+ $('#mName').textContent=p[1];$('#mPrice').textContent=fmt(p[4]);$('#mCat').textContent=CATS[p[2]];$('#mCode').textContent=p[0].toUpperCase();
+ $('#mMeta').textContent='Độ tuổi khuyến nghị: '+p[5]+' · Hàng Mideer chính hãng';
+ $('#mDesc').innerHTML='<p style="margin:0 0 8px">'+p[6]+'</p><ul>'+p[7].map(t=>'<li>'+t+'</li>').join('')+'</ul>';
+ const imgs=[...Array(N)].map((_,i)=>'img/'+p[0]+'-'+(i+1)+'.jpg');$('#mImg').src=imgs[0];$('#mImg').alt=p[1];
+ $('#mThumbs').innerHTML=imgs.map((s,i)=>'<img src="'+s+'" class="'+(i?'':'on')+'" alt="">').join('');
+ $('#mThumbs').querySelectorAll('img').forEach((t,i)=>t.onclick=()=>{$('#mImg').src=imgs[i];$('#mThumbs').querySelectorAll('img').forEach(x=>x.classList.remove('on'));t.classList.add('on')});
+ $('#modal').classList.add('on');history.replaceState(null,'','#'+p[0]);}
+function close(){$('#modal').classList.remove('on');history.replaceState(null,'',location.pathname)}
+$('#x').onclick=close;$('#modal').onclick=e=>{if(e.target.id==='modal')close()};document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+$('#q').oninput=render;$('#sort').onchange=render;render();
+if(location.hash.length>1)open(location.hash.slice(1));
+</script>
+</body>
+</html>
