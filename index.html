@@ -78,7 +78,8 @@ footer ul{list-style:none;padding:0;margin:0}footer li{margin:6px 0}
 .gal{padding:18px}
 .gal .main{aspect-ratio:1/1;border-radius:16px;overflow:hidden;background:#f7f3ef}
 .gal .main img{width:100%;height:100%;object-fit:contain}
-.thumbs{display:flex;gap:8px;margin-top:10px}
+.thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.vlist{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}.vlist li{display:flex;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:12px;padding:6px 10px;cursor:pointer;font-size:14px}.vlist li:hover,.vlist li.on{border-color:var(--blue)}.vlist img{width:46px;height:46px;object-fit:cover;border-radius:8px;flex:none}
 .thumbs img{width:22%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:2px solid transparent;cursor:pointer}
 .thumbs img.on{border-color:var(--blue)}
 .info{padding:26px 24px 24px 6px;display:flex;flex-direction:column;gap:10px}
@@ -210,7 +211,8 @@ const P=[
 ["md3410","Que tạo bong bóng xà phòng",4,2,110000,"3+","Que thổi bong bóng xà phòng cho bé chạy nhảy, đuổi bắt bong bóng ngoài trời.",["Vận động, vui chơi ngoài trời","Luyện hơi thở, phối hợp","Món quà nhỏ cho bé"]],
 ["md4304","Bộ xúc cát đi biển Beach Sand Toy Set",4,2,225000,"3+","Bộ xô, xẻng, khuôn cát cho bé xây lâu đài cát ở biển Mỹ Khê hay sân chơi gần nhà.",["Vận động ngoài trời","Sáng tạo hình khối","Hợp mang đi biển"]]
 ];
-const V={md4281:[["7 miếng (MD4281)",270000],["20 miếng (MD1420)",560000],["30 miếng – Cube set (MD1726)",560000],["46 miếng (MD1407)",1020000]],md1615:[["24 màu (MD1613)",470000],["36 màu (MD1614)",590000],["60 màu (MD1615)",865000]],md1500:[["Lúa mì hữu cơ 6 màu (MD1500)",310000],["Lúa mì hữu cơ 12 màu (MD1501)",530000],["Đất nặn tự khô 36 màu (MD1546)",615000]],musicbox:[["Mẫu MD1567",150000],["Mẫu MD1568",150000]],pearly:[["Màu tím",135000],["Màu vàng",135000],["Màu hồng",135000],["Màu xanh",135000]],md6123:[["Màu xanh dương",60000],["Màu đỏ",60000]],md2278:[["Màu trắng",615000],["Màu xanh",615000]],md3353:[["Mẫu Moo Moo Cow",250000],["Mẫu Goofy Horse",250000]],md2262:[["Mẫu Caterpillar",525000],["Mẫu Sports Day",475000]],md1531:[["Mẫu Rabbit Traveler",160000],["Mẫu Interstellar Expeditions",160000]],md6409:[["Mẫu Unicorn",90000],["Mẫu Dragon",90000]],md1542:[["Màu xanh lá",220000],["Màu tím",220000]]};
+const V={md4281:[["7 miếng (MD4281)",270000],["20 miếng (MD1420)",560000],["30 miếng – Cube set (MD1726)",560000],["46 miếng (MD1407)",1020000]],md1615:[["24 màu (MD1613)",470000],["36 màu (MD1614)",590000],["60 màu (MD1615)",865000]],md1500:[["Lúa mì hữu cơ 6 màu (MD1500)",310000],["Lúa mì hữu cơ 12 màu (MD1501)",530000],["Đất nặn tự khô 36 màu (MD1546)",615000]],musicbox:[["Mẫu MD1567",150000],["Mẫu MD1568",150000]],pearly:[["Màu tím",135000],["Màu vàng",135000],["Màu hồng",135000],["Màu xanh",135000]],md6123:[["Màu xanh dương",60000],["Màu đỏ",60000]],md2278:[["Màu trắng",615000],["Loại to – màu xanh",615000]],md3353:[["Mẫu Moo Moo Cow",250000],["Mẫu Goofy Horse",250000]],md2262:[["Mẫu Caterpillar",525000],["Mẫu Sports Day",475000]],md1531:[["Mẫu Rabbit Traveler",160000],["Mẫu Interstellar Expeditions",160000]],md6409:[["Mẫu Unicorn",90000],["Mẫu Dragon",90000]],md1542:[["Màu xanh lá",220000],["Màu tím",220000]]};
+Object.keys(V).forEach(k=>V[k].forEach((x,i)=>x[2]=k==='pearly'?'img/pearly-'+[4,2,3,1][i]+'.jpg':'img/'+k+'-v'+(i+1)+'.jpg'));
 P.forEach(p=>{const v=V[p[0]];if(v)p[4]=Math.min(...v.map(x=>x[1]))});
 const N=4;let cat=-1,age=-1;
 const $=s=>document.querySelector(s);
@@ -226,10 +228,11 @@ function render(){chips($('#cats'),CATS,()=>cat,v=>cat=v);chips($('#ages'),AGES,
 function open(code){const p=P.find(x=>x[0]===code);if(!p)return;
  $('#mName').textContent=p[1];$('#mPrice').textContent=priceTxt(p);$('#mCat').textContent=CATS[p[2]];$('#mCode').textContent=p[0].toUpperCase();
  $('#mMeta').textContent='Độ tuổi khuyến nghị: '+p[5]+' · Hàng Mideer chính hãng';
- $('#mDesc').innerHTML='<p style="margin:0 0 8px">'+p[6]+'</p><ul>'+p[7].map(t=>'<li>'+t+'</li>').join('')+'</ul>'+(V[p[0]]?'<p style="margin:10px 0 4px"><b>Phân loại có sẵn:</b></p><ul>'+V[p[0]].map(x=>'<li>'+x[0]+' – '+fmt(x[1])+'</li>').join('')+'</ul>':'');
- const imgs=[...Array(N)].map((_,i)=>'img/'+p[0]+'-'+(i+1)+'.jpg');$('#mImg').src=imgs[0];$('#mImg').alt=p[1];
+ $('#mDesc').innerHTML='<p style="margin:0 0 8px">'+p[6]+'</p><ul>'+p[7].map(t=>'<li>'+t+'</li>').join('')+'</ul>'+(V[p[0]]?'<p style="margin:10px 0 6px"><b>Phân loại có sẵn</b> (bấm để xem ảnh):</p><ul class="vlist">'+V[p[0]].map((x,i)=>'<li data-i="'+i+'"><img src="'+x[2]+'" alt=""><span>'+x[0]+'</span><b style="margin-left:auto;color:var(--blue);white-space:nowrap">'+fmt(x[1])+'</b></li>').join('')+'</ul>':'');
+ const imgs=[...Array(N)].map((_,i)=>'img/'+p[0]+'-'+(i+1)+'.jpg').concat((V[p[0]]||[]).map(x=>x[2]));$('#mImg').src=imgs[0];$('#mImg').alt=p[1];
  $('#mThumbs').innerHTML=imgs.map((s,i)=>'<img src="'+s+'" class="'+(i?'':'on')+'" alt="">').join('');
  $('#mThumbs').querySelectorAll('img').forEach((t,i)=>t.onclick=()=>{$('#mImg').src=imgs[i];$('#mThumbs').querySelectorAll('img').forEach(x=>x.classList.remove('on'));t.classList.add('on')});
+ document.querySelectorAll('.vlist li').forEach(li=>li.onclick=()=>{$('#mThumbs').querySelectorAll('img')[N+(+li.dataset.i)].click();document.querySelectorAll('.vlist li').forEach(x=>x.classList.remove('on'));li.classList.add('on')});
  $('#modal').classList.add('on');history.replaceState(null,'','#'+p[0]);}
 function close(){$('#modal').classList.remove('on');history.replaceState(null,'',location.pathname)}
 $('#x').onclick=close;$('#modal').onclick=e=>{if(e.target.id==='modal')close()};document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
